@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="end">
+  <head>
+    <meta charset='utf-8'>
+    <title> This is the second demo. Pure JavaScript, no server </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <form action=''>
+      Number of apples:  <input type="text" name="apples" id="appleid" size='6'/><br>
+      Number of oranges: <input type="text" name="oranges" id="orangeid" size='6'/><br>
+      <input type="submit" value="Calc" id='calcButton'>
+    </form>
+    <div id="answer">
+      The answer goes here.
+    </div>
+    <hr>
+    <p>
+      To see the contents of this form, do a 'view source'
+    </p>
+  <script>
+    $( '#calcButton').click( function() {
+        var apples  = Number( $( "#appleid").val() );
+        var oranges = Number( $( "#orangeid").val() );
+        var fruit   = apples + oranges;
+        var answer  = apples.toString() + " + " + oranges.toString() + " = " + fruit.toString();
+        $( "#answer" ).html( answer );
+        return false;           // prevent form submission
+    });
+
+  </script>
+  </body>
+</html>
