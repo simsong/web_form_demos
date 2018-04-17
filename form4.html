@@ -20,12 +20,8 @@
     </p>
   <script>
     function displayData(data) {
-        var apples  = Number( $( "#appleid").val() );
-        var oranges = Number( $( "#orangeid").val() );
-        var fruit   = data.fruit;
         console.log("data=",data);
-        console.log("fruit=",fruit);
-        var answer  = apples.toString() + " + " + oranges.toString() + " = " + fruit.toString();
+        var answer  = data.apples.toString() + " + " + data.oranges.toString() + " = " + data.fruit.toString();
         $( "#answer" ).html( answer );
     }
 

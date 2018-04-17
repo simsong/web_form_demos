@@ -15,5 +15,8 @@ if __name__=="__main__":
       oranges = 0
    
    print("Content-type: text/text\r\n\r\n")
-   ret = {"fruit": apples + oranges}
+   ret = { "apples":apples,
+           "oranges": oranges,
+           "fruit": apples + oranges
+   }
    print(json.dumps(ret))
